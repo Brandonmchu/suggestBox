@@ -1,28 +1,18 @@
-== README
+SuggestBox is an application that connects dreams of tools/products/services 
+that people want with the people that want to build them.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users simply "suggest" things they'd want, upvote things that others want, and
+become part of the validation process as developers and entrepreneurs -
+collectively referred to as "builders" - tackle their problems.  
 
-Things you may want to cover:
+Builders can claim suggestions (not exclusively) and let people know they're
+working on a solution, and Suggesters can be part of the proto-type and beta
+testing phases as the Builders launch.
 
-* Ruby version
+This creates a symbiotic relationship, where people get their problems solved,
+builders make things that people actually want, and get to seed the first
+users of their application with the very people that asked for it!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This application is the work of brandonmchu and chowza, after the realization
+that they could not find a legit problem to solve together because their lives
+in the first world were too comfortable.
