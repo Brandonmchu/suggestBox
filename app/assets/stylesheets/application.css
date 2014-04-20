@@ -12,3 +12,8 @@
  *= require_tree .
  *= require bootstrap
  */
+
+.logo {
+	margin: auto;
+	color:#009899;
+}

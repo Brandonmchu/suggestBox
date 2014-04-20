@@ -17,3 +17,10 @@ Suggestion.create!(title:"App that shows stock in fridge", description: "I
 Suggestion.create!(title:"Social network for dog lovers", description: "I want
 	to meet more dog lovers in my area, and would like a mobile app that does
 	that.")
+
+User.create!(email:"hello@world.com", name:"Johnny", blurb:"I am the greatest 
+	Johnny", sex:"M")
+User.create!(email:"goodbye@world.com", name:"Beatrice", blurb:"I am the 
+	greatest Betty", sex:"F")
+User.create!(email:"heyagain@world.com", name:"Ned Stark", blurb:"I am the 
+	greatest of the North!", sex:"M")

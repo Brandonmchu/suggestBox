@@ -8,7 +8,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th></th>
+      <th>Created by</th>
       <th></th>
       <th></th>
     </tr>
@@ -19,6 +19,7 @@
       <tr>
         <td><%= suggestion.title %></td>
         <td><%= suggestion.description %></td>
+        <td><%= suggestion.user.name %></td>
         <td><%= link_to 'Show', suggestion %></td>
         <td><%= link_to 'Edit', edit_suggestion_path(suggestion) %></td>
         <td><%= link_to 'Destroy', suggestion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
