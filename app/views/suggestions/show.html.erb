@@ -15,7 +15,9 @@
   <% @suggestion.followers.each do |l| %>
   <%= link_to l.name, user_path(l) %>, 
   <% end %>
-  <%= link_to 'follow this suggestion', follow_suggestion_path(@suggestion), method: :post %> 
+  <% unless @suggestion.followers.include? current_user %>
+  	<%= link_to 'follow this suggestion', follow_suggestion_path(@suggestion), method: :post %> 
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
