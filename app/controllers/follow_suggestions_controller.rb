@@ -1,0 +1,2 @@
+class FollowSuggestionsController < ApplicationController
+end

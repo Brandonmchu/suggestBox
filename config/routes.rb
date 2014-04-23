@@ -2,8 +2,15 @@ Suggestbox::Application.routes.draw do
   devise_for :users
   resources :users
 
-  resources :suggestions
+  resources :suggestions do
+    member do
+      post 'follow'
+    end
+  end
+
   root 'suggestions#index'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

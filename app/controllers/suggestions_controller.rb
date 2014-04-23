@@ -51,6 +51,11 @@ class SuggestionsController < ApplicationController
     end
   end
 
+  def follow
+    current_user.follow_suggestions.create!(suggestion_id: params[:id])
+    redirect_to suggestion_path(Suggestion.find(params[:id]))
+  end
+
   # DELETE /suggestions/1
   # DELETE /suggestions/1.json
   def destroy
