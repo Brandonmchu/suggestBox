@@ -10,5 +10,12 @@
   <%= @suggestion.description %>
 </p>
 
+<p>
+  <strong>Followers:</strong>
+  <% @suggestion.followers.each do |l| %>
+  <%= link_to l.name, user_path(l) %>, 
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
 <%= link_to 'Back', suggestions_path %>

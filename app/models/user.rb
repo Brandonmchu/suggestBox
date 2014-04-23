@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
   scope :awesome, where(name: 'Johnny')
 
 has_many :suggestions
+has_many :follow_suggestions
 
 end

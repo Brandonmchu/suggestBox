@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422225015) do
+ActiveRecord::Schema.define(version: 20140423004154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "follow_suggestions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "suggestion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "follow_suggestions", ["suggestion_id"], name: "index_follow_suggestions_on_suggestion_id", using: :btree
+  add_index "follow_suggestions", ["user_id"], name: "index_follow_suggestions_on_user_id", using: :btree
 
   create_table "suggestions", force: true do |t|
     t.string   "title"
