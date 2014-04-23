@@ -1,6 +1,9 @@
 <ul class="nav nav-pills">
-  <li><h1 class="logo">SuggestBox</h1></li>
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Profile</a></li>
-  <li><a href="#">Messages</a></li>
+  <li><h1 class="logo"><%= link_to 'SugstBx', root_path %></h1></li>
+   <% if user_signed_in? %>
+   	 <li><%= link_to "Sign out", destroy_user_session_path, {method: 'delete'} %></li>
+	 <% else %>
+	 		<li><%= link_to "Login", new_user_session_path %></li>
+	 		<li><%= link_to "Sign Up", new_user_registration_path %></li>
+   <% end %>
 </ul>

@@ -1,7 +1,7 @@
 <% content_for :title do %>My Title<% end %>
 <% content_for :description do %>My Description<% end %>
 
-<h1>Listing suggestions</h1>
+<h1>Suggestions</h1>
 
 <table class="table">
   <thead>
@@ -17,12 +17,11 @@
   <tbody>
     <% @suggestions.each do |suggestion| %>
       <tr>
-        <td><%= suggestion.title %></td>
+        <td><%= link_to suggestion.title, suggestion_path(suggestion.id) %></td>
         <td><%= suggestion.description %></td>
-        <td><%= suggestion.user.name %></td>
-        <td><%= link_to 'Show', suggestion %></td>
+        <td><%= link_to suggestion.user.name, user_path(suggestion.user.id) %></td>
         <td><%= link_to 'Edit', edit_suggestion_path(suggestion) %></td>
-        <td><%= link_to 'Destroy', suggestion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'x', suggestion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

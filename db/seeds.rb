@@ -8,19 +8,19 @@
 
 Suggestion.create!(title:"Evernote notes as Gmail drafts", description: "I'd 
 	really like a tool that captured Evernote notes in Gmail as a draft email, 
-	so that I can easily send an email to someone")
+	so that I can easily send an email to someone", user_id: 1)
 
 Suggestion.create!(title:"App that shows stock in fridge", description: "I 
 	needed an application that tracks the inventory of food I have in my 
-	fridge")
+	fridge", user_id: 2)
 
 Suggestion.create!(title:"Social network for dog lovers", description: "I want
 	to meet more dog lovers in my area, and would like a mobile app that does
-	that.")
+	that.", user_id: 3)
 
-User.create!(email:"hello@world.com", name:"Johnny", blurb:"I am the greatest 
+User.create!(email:"brandon@gmail.com", password:"Admin123", name:"Johnny", blurb:"I am the greatest 
 	Johnny", sex:"M")
-User.create!(email:"goodbye@world.com", name:"Beatrice", blurb:"I am the 
+User.create!(email:"terence@gmail.com", password:"Admin123", name:"Beatrice", blurb:"I am the 
 	greatest Betty", sex:"F")
-User.create!(email:"heyagain@world.com", name:"Ned Stark", blurb:"I am the 
+User.create!(email:"heyagain@world.com", password:"Admin123", name:"Ned Stark", blurb:"I am the 
 	greatest of the North!", sex:"M")
