@@ -52,9 +52,15 @@ class SuggestionsController < ApplicationController
   end
 
   def follow
-    current_user.follow_suggestions.create!(suggestion_id: params[:id])
-    redirect_to suggestion_path(Suggestion.find(params[:id]))
+    if request.post?
+      current_user.follow_suggestions.create!(suggestion_id: params[:id])
+      redirect_to suggestion_path(Suggestion.find(params[:id]))
+    elsif request.delete?
+      current_user.follow_suggestions.find_by_suggestion_id(params[:id]).destroy
+      redirect_to suggestion_path(Suggestion.find(params[:id]))      
+    end
   end
+
 
   # DELETE /suggestions/1
   # DELETE /suggestions/1.json

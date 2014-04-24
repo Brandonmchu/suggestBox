@@ -5,8 +5,18 @@ Suggestbox::Application.routes.draw do
   resources :suggestions do
     member do
       post 'follow'
+      delete 'follow'
     end
   end
+
+  # This is another way to do
+  # do
+  #   member do
+  #     post 'follow'
+  #   end
+  # end
+  # post 'suggestions/:id/follow' => 'suggestions#follow', :as => :follow_suggestion
+
 
   root 'suggestions#index'
   
