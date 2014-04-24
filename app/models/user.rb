@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
 
 has_many :suggestions
 has_many :follow_suggestions
+has_many :answers
 
 end

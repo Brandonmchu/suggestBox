@@ -1,6 +1,8 @@
 Suggestbox::Application.routes.draw do
+  get "answers/show"
   devise_for :users
   resources :users
+  resources :answers
 
   resources :suggestions do
     member do

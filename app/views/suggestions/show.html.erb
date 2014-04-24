@@ -18,9 +18,23 @@
   <% if @suggestion.followers.include? current_user %>
   	<%= link_to 'unfollow', follow_suggestion_path(@suggestion), method: :delete %> 
   <% else %>
-  	<%= link_to 'follow this suggestion', follow_suggestion_path(@suggestion), method: :post %> 
+	<%= link_to 'follows', follow_suggestion_path(@suggestion), method: :post %>
   <% end %>
+</p>
+
+
+<p>
+<strong> Answers <%= link_to '(+)', new_answer_path(@suggestion) %>: </strong> 
+
+
+<% @suggestion.answers.each do |answer| %>
+<ul>
+<li><%=answer.user.name%></li>
+<li><%=answer.description%></li>
+<li><%=answer.link%></li></ul>
+<%end%>
 </p>
 
 <%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
 <%= link_to 'Back', suggestions_path %>
+
